@@ -1,14 +1,14 @@
 #!/bin/sj
 . "$(dirname "$0")/_/husky.sh"
 
-echo "🐶[HUSKY]: Checking ESLint Rules..."
+echo "🐶Initiating Husky... Checking ESLint Rules..."
 
-npm lint ||
+npm run lint ||
 (
-    echo "❌ [HUSKY]: Rule violation detected! Check the ESlint rules, and try it again.";
+    echo "❌ Rule violation detected! Check the ESlint rules, and try it again.";
     false; # Nullfy the commit.ß
 )
 
-echo "🚀[HUSKY]: No problems found. Please wait..."
+echo "🚀No problems found. Please wait..."
 
 

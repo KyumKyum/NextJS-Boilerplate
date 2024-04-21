@@ -1,13 +1,10 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "prettier"
-  ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
-  "rules": {
-    "react/react-in-jsx-scope": "off",
-    "no-new-wrappers": "error"
-  }
+    "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "no-new-wrappers": "error"
+    }
 }
