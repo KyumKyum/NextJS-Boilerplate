@@ -1,8 +1,7 @@
-'use client';
+import { trpcServerClient } from '@/app/_trpc/trpcServerClient';
 
-import { trpc } from '@/app/_trpc/trpc_client';
+const greetings = async (): Promise<string> => {
+    return await trpcServerClient.greeting();
+};
 
-export default function greetings(): string {
-    const greeting = trpc.greeting.useQuery();
-    return JSON.stringify(greeting.data);
-}
+export default greetings;
