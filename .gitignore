@@ -4,6 +4,9 @@
 # env
 /src/env/*
 
+#pgdata
+/pgdata
+
 # dependencies
 /node_modules
 /.pnp

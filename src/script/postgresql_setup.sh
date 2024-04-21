@@ -6,12 +6,6 @@ if docker container inspect postgres >/dev/null 2>&1; then
   echo
 fi
 
-if docker container inspect redis >/dev/null 2>&1; then
-  echo 'Container for redis exists! Terminating the container...'
-  docker stop redis && docker rm redis
-  echo
-fi
-
 ####### POSTGRESQL #######
 echo "🚀[POSTGRESQL] Initiating set up for PostgreSQL..."
 
@@ -65,13 +59,13 @@ done
 
 CONTAINER_ID="$(docker ps -aqf "name=$CONTAINER_NAME")"
 
-# Check if the 'zkvoting' database exists and create it if not
-DB_EXISTS=$(docker exec "$CONTAINER_ID" psql -U postgres -tAc "SELECT 1 FROM pg_database WHERE datname = 'zkvoting'")
+# Check if the 'project' database exists and create it if not
+DB_EXISTS=$(docker exec "$CONTAINER_ID" psql -U postgres -tAc "SELECT 1 FROM pg_database WHERE datname = 'project'")
 if [ "$DB_EXISTS" != "1" ]; then
-  docker exec "$CONTAINER_ID" psql -U postgres -c "CREATE DATABASE zkvoting WITH ENCODING='UTF8' LC_COLLATE='en_US.utf8' LC_CTYPE='en_US.utf8';"
-  echo "Database 'zkvoting' created."
+  docker exec "$CONTAINER_ID" psql -U postgres -c "CREATE DATABASE project WITH ENCODING='UTF8' LC_COLLATE='en_US.utf8' LC_CTYPE='en_US.utf8';"
+  echo "Database 'project' created."
 else
-  echo "Database 'zkvoting' already exists."
+  echo "Database 'project' already exists."
 fi
 
 echo "✨ Connection Successful! PostgreSQL is up and running! ✨"
