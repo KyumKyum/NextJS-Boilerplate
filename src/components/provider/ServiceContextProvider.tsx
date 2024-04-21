@@ -4,7 +4,7 @@ import React from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { trpc, trpcClient } from '@/app/_trpc/trpcClient';
 
-const Provider = ({
+const ServiceContextProvider = ({
     children,
 }: {
     children: React.ReactNode;
@@ -21,4 +21,4 @@ const Provider = ({
     );
 };
 
-export default Provider;
+export default ServiceContextProvider;
