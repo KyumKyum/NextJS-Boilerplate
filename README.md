@@ -1,6 +1,5 @@
-
-
 ## NextJS & TRPC Full-Stack Boilerplate
+
 #### Customized by Jay Lim (for personnal uses.)
 
 <p align="center">
@@ -29,10 +28,13 @@ $ npm install
 ```
 
 #### Before Start
+
 ###### 1. Setup ProstgresQL
+
 ```bash
 sh script/setup.sh
 ```
+
 > Customize the DB name by modifying the script. (initial value: 'project')
 
 #### Running the app
