@@ -19,6 +19,8 @@
 <img alt="Prisma" src ="https://img.shields.io/badge/Prisma-2D3748.svg?&style=for-the-badge&logo=prisma&logoColor=white"/>
 <img alt="TRPC" src ="https://img.shields.io/badge/TRPC-2596BE.svg?&style=for-the-badge&logo=trpc&logoColor=white"/>
 <img alt="Zod" src ="https://img.shields.io/badge/Zod-3E67B1.svg?&style=for-the-badge&logo=zod&logoColor=white"/>
+<img alt="Storybook" src ="https://img.shields.io/badge/Storybook-FF4785.svg?&style=for-the-badge&logo=storybook&logoColor=white"/>
+<img alt="Playwright" src ="https://img.shields.io/badge/Playwright-2EAD33.svg?&style=for-the-badge&logo=playwright&logoColor=white"/>
 </p>
 
 #### Installation
